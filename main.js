@@ -1,5 +1,6 @@
 "use strict"
 
+//REFACTOR THIS INTO DOM FORMAT
 function renderCoffee(coffee) {
     var html = '<tr class="coffee">';
     html += '<td>' + coffee.id + '</td>';
