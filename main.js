@@ -2,11 +2,11 @@
 
 //REFACTOR THIS INTO DOM FORMAT
 function renderCoffee(coffee) {
-    var html = '<tr class="coffee">';
-    html += '<td>' + coffee.id + '</td>';
-    html += '<td>' + coffee.name + '</td>';
-    html += '<td>' + coffee.roast + '</td>';
-    html += '</tr>';
+    var html = '<div class="card coffee" id="coffee.roast" style="border: none">';
+    // html += '' + coffee.id + '';
+    html += '<h2>' + coffee.name + '</h2>';
+    html += '<h5>' + coffee.roast + '</h5>';
+    html += '</div>';
 
     return html;
 }
@@ -56,3 +56,9 @@ var roastSelection = document.querySelector('#roast-selection');
 tbody.innerHTML = renderCoffees(coffees);
 
 submitButton.addEventListener('click', updateCoffees);
+
+function roastName () {
+    var leftName = document.getElementById("name-selection");
+
+
+}
