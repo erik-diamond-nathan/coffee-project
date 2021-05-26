@@ -2,43 +2,54 @@
 
 //REFACTOR THIS INTO DOM FORMAT
 function renderCoffee(coffee) {
-    var html = '<div class="card coffee" id="coffee.roast" style="border: none">';
-    // html += '' + coffee.id + '';
-    html += '<h2>' + coffee.name + '</h2>';
-    html += '<h5>' + coffee.roast + '</h5>';
-    html += '</div>';
+    var html = document.createElement("div"); // <---REFACTORED DOM
+    var name = document.createElement("h1");
+    name.innerText = coffee.name;
+    var roast = document.createElement("h5");
+    roast.innerText = coffee.roast;
+
+    html.appendChild(name);
+    html.appendChild(roast);
 
     return html;
 }
 
 function renderCoffees(coffees) {
-    var html = '';
-    for(var i = 0; i < coffees.length; i++) {
-        html += renderCoffee(coffees[i]);
+    var html = [];
+    for (var i = 0; i < coffees.length; i++) {
+        html.push(renderCoffee(coffees[i]));
     }
     return html;
 }
 
+
 function updateCoffees(e) {
-    e.preventDefault(); // don't submit the form, we just want to update the data
+    if (e) e.preventDefault(); // don't submit the form, we just want to update the data
     var selectedRoast = roastSelection.value;
     console.log(roastSelection);
-    var selectedName = nameSelection.value.toLowerCase();
+    var selectedName = nameSelection.value.toUpperCase();
     var filteredCoffees = [];
-    coffees.forEach(function(coffee) {
-        if (selectedRoast === "all" && coffee.name.toLowerCase().includes(selectedName)) {
+    coffees.forEach(function (coffee) {
+        if (selectedRoast === "all" && coffee.name.toUpperCase().includes(selectedName)) {
             filteredCoffees.push(coffee);
         }
-        if (coffee.roast === selectedRoast && coffee.name.toLowerCase().includes(selectedName)) {
+        if (coffee.roast === selectedRoast && coffee.name.toUpperCase().includes(selectedName)) {
             filteredCoffees.push(coffee);
         }
     });
-    tbody.innerHTML = renderCoffees(filteredCoffees);
+    var coffeeNode = renderCoffees(filteredCoffees);
+    tbody.innerHTML = "";
+    for (let node of coffeeNode) {
+        tbody.appendChild(node);
+
+    }
 }
+
+
 function newCoffee(e) {
     e.preventDefault();
     coffees.push({
-        id: coffees.length +1,
+        id: coffees.length + 1,
         name: newName.value,
         roast: newRoast.value
     });
@@ -71,10 +82,11 @@ var newName = document.querySelector('#new-name');
 var newRoast = document.querySelector('#new-roast');
 var newSubmit = document.querySelector('#new-submit');
 
-tbody.innerHTML = renderCoffees(coffees);
+// tbody.innerHTML = renderCoffees(coffees);
+updateCoffees();
 
 submitButton.addEventListener('click', updateCoffees);
 newSubmit.addEventListener('click', newCoffee);
-newSubmit.addEventListener('click',updateCoffees);
+newSubmit.addEventListener('click', updateCoffees);
 nameSelection.addEventListener('input', updateCoffees);
 roastSelection.addEventListener('change', updateCoffees)

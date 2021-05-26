@@ -12,22 +12,25 @@ td, th {
     background-color: #ece0d1;
     min-height: 100vh;
 }
- .jumbotron{
-     background-image: url("https://i.pinimg.com/originals/98/33/e2/9833e22c4361d1185913336f82046a43.jpg");
-     padding-left: 0;
-     padding-right: 0;
+
+.jumbotron {
+    background-image: url("https://i.pinimg.com/originals/98/33/e2/9833e22c4361d1185913336f82046a43.jpg");
+    padding-left: 0;
+    padding-right: 0;
 }
 
- .jumbotron > h1 {
-     font-family: 'Chela One', cursive;
-     background-color: white;
-     opacity: 80%;
+.jumbotron > h1 {
+    font-family: 'Chela One', cursive;
+    background-color: white;
+    opacity: 80%;
 
- }
+}
+
 .row {
     background-color: white;
     border-radius: 25px;
 }
+
 #row1 {
     display: flex;
     justify-content: center;
@@ -36,15 +39,18 @@ td, th {
     height: 65vh;
 
 }
+
 #row2 {
     border-left: solid #ece0d1;
     border-right: solid #ece0d1;
 }
+
 h1.new-coffee {
     font-family: 'Bebas Neue', cursive;
     text-align: center;
 
 }
+
 #coffees {
     font-family: 'Pattaya', sans-serif;
 }
@@ -60,7 +66,9 @@ div > h5 {
 #secondimage {
     width: inherit;
 }
+
 #tm {
     padding-top: 10px;
     padding-left: 0px;
 }
+
