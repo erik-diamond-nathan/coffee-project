@@ -21,8 +21,9 @@ td, th {
 
 .jumbotron > h1 {
     font-family: 'Chela One', cursive;
-    background-color: white;
-    opacity: 80%;
+    font-size: 100px;
+    background-color: transparent;
+    opacity: 95%;
 
 }
 
@@ -72,3 +73,6 @@ div > h5 {
     padding-left: 0px;
 }
 
+.footer {
+    background-color: #ece0d1 ;
+}
