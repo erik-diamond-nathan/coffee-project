@@ -1,99 +1,101 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <title></title>
-        <link rel="stylesheet" href="style.css">
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
-              integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
-              crossorigin="anonymous">
-        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
-                integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
-                crossorigin="anonymous"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
-                integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
-                crossorigin="anonymous"></script>
-        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
-                integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
-                crossorigin="anonymous"></script>
-        <link rel="preconnect" href="https://fonts.gstatic.com">
-        <link href="https://fonts.googleapis.com/css2?family=Pattaya&display=swap" rel="stylesheet">
-        <link rel="preconnect" href="https://fonts.gstatic.com">
-        <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Pattaya&display=swap" rel="stylesheet">
-        <link rel="preconnect" href="https://fonts.gstatic.com">
-        <link href="https://fonts.googleapis.com/css2?family=Anton&family=Bebas+Neue&family=Pattaya&display=swap"
-              rel="stylesheet">
-        <link rel="preconnect" href="https://fonts.gstatic.com">
-        <link href="https://fonts.googleapis.com/css2?family=Chela+One&display=swap" rel="stylesheet">
-    </head>
-    <body>
-        <div class="page-wrap">        <!-- TOP WEB DIV-->
-            <div class="jumbotron jumbotron-fluid">
-                <h1 class="display-3 d-flex justify-content-center">DNE COFFEE</h1>
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+          integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+          crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+            integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+            crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+            integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+            crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+            integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+            crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Pattaya&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Pattaya&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Anton&family=Bebas+Neue&family=Pattaya&display=swap"
+          rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Chela+One&display=swap" rel="stylesheet">
+</head>
+<body>
+<div class="page-wrap">
+    <!-- TOP WEB DIV-->
+    <div class="jumbotron jumbotron-fluid">
+        <h1 class="display-3 d-flex justify-content-center">DNE COFFEE</h1>
+    </div>
+    <!-- COFFEE DISPLAY + SEARCH + ADD/DELETE -->
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-4 col-md-4" id="row1">
+                <div id="coffees" class="text-left"></div>
             </div>
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-4 col-md-4" id="row1">
-                        <div id="coffees" class="text-left"></div>
-                    </div>
-                    <div class="col-lg-4 col-md-4" id="row2">
-                        <div class="search-boys">
-                            <h1 class="new-coffee">Find Your Brew</h1>
-                            <form>
-                                <div class="form-group">
-                                    <label for="roast-selection">Roast</label>
-                                    <select class="form-control" id="roast-selection">
-                                        <option>all</option>
-                                        <option>light</option>
-                                        <option>medium</option>
-                                        <option>dark</option>
-                                    </select>
-                                </div>
-                                <div class="form-group">
-                                    <label for="name-selection">Coffee Name</label>
-                                    <input type="text" class="form-control" id="name-selection">
-                                    <input type="submit" id="submit" value="Submit" class="btn btn-dark">
-                                </div>
-                            </form>
+            <div class="col-lg-4 col-md-4" id="row2">
+                <div class="search-boys">
+                    <h1 class="new-coffee">Find Your Brew</h1>
+                    <form>
+                        <div class="form-group">
+                            <label for="roast-selection">Roast</label>
+                            <select class="form-control" id="roast-selection">
+                                <option>all</option>
+                                <option>light</option>
+                                <option>medium</option>
+                                <option>dark</option>
+                            </select>
                         </div>
-                        <img src="https://i.pinimg.com/originals/88/5f/05/885f05a8c8d838ce9998b7a6747da823.gif"
-                             id="firstimage">
-                    </div>
-                    <div class="col-lg-4 col-md-4" id="row3">
-                        <h1 class="new-coffee">Add a Brew</h1>
-                        <form>
-                            <div class="form-group">
-                                <label for="new-roast">Roast</label>
-                                <select class="form-control" id="new-roast">
-                                    <option>Light</option>
-                                    <option>Medium</option>
-                                    <option>Dark</option>
-                                </select>
-                            </div>
-                            <div class="form-group">
-                                <label for="new-name">Coffee Name</label>
-                                <input type="text" class="form-control" id="new-name">
-                                <div>
-
-                                    <input type="submit" id="new-submit" value="Submit"  class="btn btn-dark">
-                                </div>
-                            </div>
-                        </form>
-                        <img src="https://media.tenor.com/images/6a07aeb17516566170904ecb5e8eeb6b/tenor.gif"
-                             id="secondimage">
-                        <div id="tm">
-                            <p>DNE Coffee 2021
-                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
-                                     class="bi bi-badge-tm" viewBox="0 0 16 16">
-                                    <path d="M5.295 11V5.995H7V5H2.403v.994h1.701V11h1.19zm3.397 0V7.01h.058l1.428 3.239h.773l1.42-3.24h.057V11H13.5V5.001h-1.2l-1.71 3.894h-.039l-1.71-3.894H7.634V11h1.06z"/>
-                                    <path d="M14 3a1 1 0 0 1 1 1v8a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1h12zM2 2a2 2 0 0 0-2 2v8a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V4a2 2 0 0 0-2-2H2z"/>
-                                </svg>
-                            </p>
+                        <div class="form-group">
+                            <label for="name-selection">Coffee Name</label>
+                            <input type="text" class="form-control" id="name-selection">
+                            <input type="submit" id="submit" value="Submit" class="btn btn-dark">
                         </div>
-                    </div>
+                    </form>
                 </div>
+                <!--                        <img src="https://i.pinimg.com/originals/88/5f/05/885f05a8c8d838ce9998b7a6747da823.gif"-->
+                <!--                             id="firstimage">-->
+            </div>
+            <div class="col-lg-4 col-md-4" id="row3">
+                <h1 class="new-coffee">Add a Brew</h1>
+                <form>
+                    <div class="form-group">
+                        <label for="new-roast">Roast</label>
+                        <select class="form-control" id="new-roast">
+                            <option>Light</option>
+                            <option>Medium</option>
+                            <option>Dark</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="new-name">Coffee Name</label>
+                        <input type="text" class="form-control" id="new-name">
+                        <div>
+
+                            <input type="submit" id="new-submit" value="Submit" class="btn btn-dark">
+                        </div>
+                    </div>
+                </form>
+                <!--                        <img src="https://media.tenor.com/images/6a07aeb17516566170904ecb5e8eeb6b/tenor.gif"-->
+                <!--                             id="secondimage">-->
             </div>
         </div>
-        <script src="main.js"></script>
-    </body>
+    </div>
+</div>
+<script src="main.js"></script>
+<footer class="footer">
+    <center>DNE Coffee 2021 ☕️
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+             class="bi bi-badge-tm" viewBox="0 0 16 16">
+            <path d="M5.295 11V5.995H7V5H2.403v.994h1.701V11h1.19zm3.397 0V7.01h.058l1.428 3.239h.773l1.42-3.24h.057V11H13.5V5.001h-1.2l-1.71 3.894h-.039l-1.71-3.894H7.634V11h1.06z"/>
+            <path d="M14 3a1 1 0 0 1 1 1v8a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1h12zM2 2a2 2 0 0 0-2 2v8a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V4a2 2 0 0 0-2-2H2z"/>
+        </svg>
+    </center>
+</footer>
+</body>
 </html>
