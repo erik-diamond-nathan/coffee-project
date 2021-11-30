@@ -8,13 +8,15 @@ td, th {
     padding: 5px 10px;
 }
 
-.page-wrap {
-    background-color: #ece0d1;
-    min-height: 100vh;
+body {
+    background-image: linear-gradient(#ece0d1, #efe8e0, #f4f2f0);
+    /*min-height: 100vh;*/
 }
 
+/*header*/
 .jumbotron {
     background-image: url("https://i.pinimg.com/originals/98/33/e2/9833e22c4361d1185913336f82046a43.jpg");
+    opacity: 90%;
     padding-left: 0;
     padding-right: 0;
 }
@@ -27,23 +29,39 @@ td, th {
 
 }
 
+/* coffee table*/
+.container {
+    margin-top: 10%;
+    margin-bottom: 10%;
+}
+
 .row {
     background-color: white;
     border-radius: 25px;
 }
 
+/* coffee names */
 #row1 {
     display: flex;
     justify-content: center;
     padding-top: 5px;
     overflow-y: scroll;
     height: 65vh;
-
 }
 
+/* search coffees */
 #row2 {
     border-left: solid #ece0d1;
     border-right: solid #ece0d1;
+}
+
+.new-coffee {
+    margin-top: 25%;
+}
+
+/* add coffees */
+#row3 {
+
 }
 
 h1.new-coffee {
@@ -60,19 +78,20 @@ div > h5 {
     font-family: 'Bebas Neue', cursive;
 }
 
-#firstimage {
-    width: inherit;
-}
+/*#firstimage {*/
+/*    width: inherit;*/
+/*}*/
 
-#secondimage {
-    width: inherit;
-}
+/*#secondimage {*/
+/*    width: inherit;*/
+/*}*/
 
 #tm {
     padding-top: 10px;
     padding-left: 0px;
 }
 
+/* footer */
 .footer {
-    background-color: #ece0d1 ;
+    background-color: #f4f2f0;
 }
